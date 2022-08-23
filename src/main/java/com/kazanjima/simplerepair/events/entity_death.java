@@ -12,7 +12,7 @@ public class entity_death implements Listener {
     public void onEvent(EntityDeathEvent event){
         Entity entity = event.getEntity();
         EntityType entityType = entity.getType();
-        double chance = getChance(entityType);
+        double baseChance = getChance(entityType);
         
         //Roll for drop, and if success, drop naturally where it died.
     }
