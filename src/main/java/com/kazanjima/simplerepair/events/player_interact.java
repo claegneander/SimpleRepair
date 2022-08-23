@@ -27,25 +27,21 @@ public class player_interact implements Listener {
                 if (dh.hasPDCInteger(player, "scroll-of-repairing")) {
                     try {
                         Integer state = dh.getPDCInteger(player, "scroll-of-repairing");
-                        if (utility.compare(itemStack, targetItem)) {
-                            if (state == 0) {
-                                dh.setPDCInteger(player, "scroll-of-repairing", 1);
-                                for(int i = 0; i <= player.getInventory().getSize(); i++) {
-                                    if (player.getInventory().getItem(i) != null) {
-                                        ItemStack currentItem = player.getInventory().getItem(i);
-                                        assert currentItem != null;
-                                        int currentDurability = currentItem.getDurability();
-                                        int maxDurability = currentItem.getMaxItemUseDuration();
-                                        if (currentDurability > maxDurability) {
-                                            currentItem.setDurability((short) maxDurability);
-                                        }
-                                    }
+                        if (state == 0) {
+                            if (!utility.compare(itemStack, targetItem)) {
+                                int currentDurability = itemStack.getDurability();
+                                int maxDurability = player.getActiveItem().getMaxItemUseDuration();
+                                if (currentDurability != maxDurability) {
+                                    player.getItemInHand().setDurability((short) maxDurability);
+                                    dh.setPDCInteger(player, "scroll-of-repairing", 1);
+                                    utility.removeItem(player, targetItem, 1);
+                                    player.sendMessage(ChatColor.GREEN + "Repair successful.");
                                 }
-                                utility.removeItem(player, targetItem, 1);
-                                player.sendMessage(ChatColor.GREEN + "Repaired: " + itemStack.getItemMeta().displayName() );
-                            }else{
+                            }
+                        }else {
+                            if (utility.compare(itemStack, targetItem)) {
                                 dh.setPDCInteger(player, "scroll-of-repairing", 0);
-                                player.sendMessage(ChatColor.GREEN + "Right click to confirm.");
+                                player.sendMessage(ChatColor.GREEN + "Right click with a damaged item.");
                             }
                         }
                     }catch (NullPointerException e){

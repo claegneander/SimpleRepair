@@ -1,11 +1,88 @@
 #Please change settings in here with caution.
 
-#These setting will enable or disable the custom item drops.
-#Set enabled to false in order disable one of the items.
-#Chance is calculated in percentage, and is the BASE chance. Certain mobs have lower chances.
+#Each mob is given an individual chance. By default, passive mobs have no chance.
 drops:
-  repair-gem:
-    enabled: true
-    chance: 10
+  entityType:
+    #Passives
+    allay: 0
+    axolotl: 0
+    bat: 0
+    cat: 0
+    chicken: 0
+    cod: 0
+    cow: 0
+    donkey: 0
+    fox: 0
+    frog: 0
+    glow-squid: 0
+    horse: 0
+    mooshroom: 0
+    mule: 0
+    ocelot: 0
+    parrot: 0
+    pig: 0
+    pufferfish: 0
+    rabbit: 0
+    salmon: 0
+    sheep: 0
+    skeleton-horse: 0
+    snow-golem: 0
+    squid: 0
+    strider: 0
+    tadpole: 0
+    tropical-fish: 0
+    turtle: 0
+    villager: 0
+    wandering-trader: 0
+    #Neutrals
+    bee: 1
+    cave-spider: 1
+    dolphin: 1
+    enderman: 1
+    goat: 1
+    iron-golem: 1
+    llama: 1
+    panda: 1
+    piglin: 1
+    polar-bear: 1
+    spider: 1
+    trader-llama: 1
+    wolf: 1
+    zombified-piglin: 1
+    #Hostiles
+    blaze: 5
+    chicken-jockey: 5
+    creeper: 5
+    drowned: 5
+    elder-guardian: 5
+    endermite: 5
+    evoker: 5
+    ghast: 5
+    guardian: 5
+    hoglin: 5
+    husk: 5
+    magma-cube: 5
+    phantom: 5
+    piglin-brute: 5
+    pillager: 5
+    ravager: 5
+    shulker: 5
+    silverfish: 5
+    skeleton: 5
+    skeleton-horseman: 5
+    slime: 5
+    spider-jockey: 5
+    stray: 5
+    vex: 5
+    vindicator: 5
+    warden: 5
+    witch: 5
+    wither-skeleton: 5
+    zoglin: 5
+    zombie: 5
+    zombie-villager: 5
+    #Bosses
+    ender-dragon: 10
+    wither: 10
 
 
