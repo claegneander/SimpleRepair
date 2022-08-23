@@ -1,0 +1,32 @@
+name: SimpleRepair
+version: '${project.version}'
+main: com.kazanjima.simplerepair.Main
+api-version: 1.19
+authors: [ claegneander ]
+description: SimpleRepair lets entities drop repair gems.
+
+#Going to use the abbreviation "sr" for SimpleRepair when doing permissions.
+commands:
+  item:
+    permission: sr.commands.item
+    usage: "/item [target]"
+  repair:
+    permission: sr.commands.repair
+    usage: "/repair"
+  repair-all:
+    permission: sr.commands.repair-all
+    usage: "/repair-all"
+
+#SimpleRepair doesn't use many permissions since it is simple.
+permissions:
+  sr.commands.*:
+    children:
+      sr.commands.item: true
+      sr.commands.repair: true
+      sr.commands.repair-all: true
+  sr.commands.item:
+    default: op
+  sr.commands.repair:
+    default: op
+  sr.commands.repair-all:
+    default: op

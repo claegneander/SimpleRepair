@@ -1,0 +1,11 @@
+#Please change settings in here with caution.
+
+#These setting will enable or disable the custom item drops.
+#Set enabled to false in order disable one of the items.
+#Chance is calculated in percentage, and is the BASE chance. Certain mobs have lower chances.
+drops:
+  repair-gem:
+    enabled: true
+    chance: 10
+
+
