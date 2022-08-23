@@ -5,7 +5,7 @@ drops:
   #Each item has a base rate, which is multiplied by the chance of the entityType.
   #Keep in mind this math is done by percentage, not by number. 50% x 10 = 55%, not 500%.
   items:
-    scroll-of-repairing: 10
+    scroll-of-repairing: 1
   #Each mob is given an individual chance. By default, passive mobs have no chance.
   entityType:
     #Passives
