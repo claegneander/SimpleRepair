@@ -1,6 +1,7 @@
 package com.kazanjima.simplerepair;
 
 import com.kazanjima.simplerepair.commands.item;
+import com.kazanjima.simplerepair.events.entity_death;
 import com.kazanjima.simplerepair.events.player_interact;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -37,6 +38,7 @@ public final class Main extends JavaPlugin {
     }
     public void registerEvents(){
         PluginManager pm = getServer().getPluginManager();
+        pm.registerEvents(new entity_death(), this);
         pm.registerEvents(new player_interact(), this);
         l.info("Events have been registered.");
     }
