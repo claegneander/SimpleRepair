@@ -1,12 +1,18 @@
 #Please change settings in here with caution.
 
+#You can change if the entities from spawners allow drops or not.
+settings:
+  allow-spawner-mobs: false
 
 drops:
-  #Each item has a base rate, which is multiplied by the chance of the entityType.
-  #Keep in mind this math is done by percentage, not by number. 50% x 10 = 55%, not 500%.
+  #Each item has a base chance, which is multiplied by the chance of the entityType.
+  #If you want to double the chance for all entities, you can chance the base-chance to 2 instead of 1.
   items:
-    scroll-of-repairing: 1
+    scroll-of-repairing:
+      enabled: true
+      base-chance: 1
   #Each mob is given an individual chance. By default, passive mobs have no chance.
+  #The numbers are calculated as whole percents, so a 1 equates to 1%.
   entityType:
     #Passives
     allay: 0
@@ -42,50 +48,50 @@ drops:
     #Neutrals
     bee: 1
     cave-spider: 1
-    dolphin: 1
+    dolphin: 0
     enderman: 1
     goat: 1
     iron-golem: 1
-    llama: 1
-    panda: 1
+    llama: 0
+    panda: 0
     piglin: 1
     polar-bear: 1
     spider: 1
-    trader-llama: 1
+    trader-llama: 0
     wolf: 1
     zombified-piglin: 1
     #Hostiles
-    blaze: 5
+    blaze: 2
     chicken-jockey: 5
-    creeper: 5
-    drowned: 5
+    creeper: 2
+    drowned: 2
     elder-guardian: 5
-    endermite: 5
-    evoker: 5
-    ghast: 5
-    guardian: 5
-    hoglin: 5
-    husk: 5
-    magma-cube: 5
-    phantom: 5
-    piglin-brute: 5
-    pillager: 5
+    endermite: 1
+    evoker: 2
+    ghast: 2
+    guardian: 2
+    hoglin: 2
+    husk: 2
+    magma-cube: 1
+    phantom: 2
+    piglin-brute: 3
+    pillager: 2
     ravager: 5
-    shulker: 5
-    silverfish: 5
-    skeleton: 5
-    skeleton-horseman: 5
-    slime: 5
-    spider-jockey: 5
-    stray: 5
-    vex: 5
-    vindicator: 5
-    warden: 5
-    witch: 5
-    wither-skeleton: 5
-    zoglin: 5
-    zombie: 5
-    zombie-villager: 5
+    shulker: 1
+    silverfish: 1
+    skeleton: 2
+    skeleton-horseman: 2
+    slime: 1
+    spider-jockey: 2
+    stray: 2
+    vex: 2
+    vindicator: 2
+    warden: 10
+    witch: 2
+    wither-skeleton: 2
+    zoglin: 2
+    zombie: 2
+    zombie-villager: 2
     #Bosses
     ender-dragon: 10
     wither: 10

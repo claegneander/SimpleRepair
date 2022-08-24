@@ -1,5 +1,6 @@
 package com.kazanjima.simplerepair.commands;
 
+import com.kazanjima.simplerepair.items.excalibur;
 import com.kazanjima.simplerepair.items.scroll_of_repairing;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
@@ -48,6 +49,7 @@ public class item implements CommandExecutor {
     public static ArrayList<ItemStack> getItems () {
         ArrayList<ItemStack> items = new ArrayList<>();
         items.add(scroll_of_repairing.get());
+        items.add(excalibur.get());
         return items;
     }
     /*
