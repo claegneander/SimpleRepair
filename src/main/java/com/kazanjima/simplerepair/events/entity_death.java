@@ -38,7 +38,6 @@ public class entity_death implements Listener {
                 } else {
                     if (dh.hasPDCInteger(entity, "natural-spawn")) {
                         if (dh.getPDCInteger(entity, "natural-spawn") == 1) {
-                            System.out.println("Mob was not a spawner mob.");
                             entity.getLocation().getWorld().dropItemNaturally(location, scroll_of_repairing.get());
                         }
                     }
